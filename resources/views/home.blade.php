@@ -8,5 +8,13 @@
 </head>
 <body>
     <h1>hello word</h1>
+    <ul>
+        <li><a href="/"> home</a></li>
+        <li><a href="{{route('contatti')}}"> contatti</a></li>
+        <li><a href="{{route('descrizione')}}"> descrizione</a></li>
+    </ul>
+    <h3>Ciao, mi chiamo {{ $name }} {{ $lastname }}</h3>
+
+
 </body>
 </html>

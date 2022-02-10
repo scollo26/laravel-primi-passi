@@ -18,6 +18,37 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', function () {
-    return view('home');
-});
+    $data = [
+        'name' => 'Giovanni',
+        'lastname' => 'Scollo',
+        
+    ];
+    return view('home', $data);
+})->name('home');
 
+
+
+
+Route::get('/contatti', function () {
+    $data = [
+        'contacts' => [
+                    
+            'email' => 'giovçgmail.com',
+            'tel' => '93463452'
+                    
+        ]
+    ];
+    return view('contatti', $data);
+})->name('contatti');
+
+
+
+
+Route::get('/descrizione', function () {
+    $data = [
+        'descrizione' => 'lorem ipsum'
+                    
+        
+    ];
+    return view('descrizione', $data);
+})->name('descrizione');
